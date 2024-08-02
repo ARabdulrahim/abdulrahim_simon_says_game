@@ -15,7 +15,8 @@ let highscore=0;
 let h2=document.querySelector("h2");
 
 // game start
-document.addEventListener("keypress",function(){
+let strat=document.querySelector(".start");
+strat.addEventListener("click",function(){
     if(started==false){
         console.log("game is started");
         started=true;
@@ -64,7 +65,7 @@ function checkAns(idx){
         setTimeout(levelUp,1000);
     }
    } else{
-    h2.innerHTML= `Game Over! Your score was <b>${level}</b><br>Press any key to start.`;
+    h2.innerHTML= `Game Over! Your score was <b>${level}</b><br>Click Start button to start the game.`;
     document.querySelector("body").style.backgroundColor="red";
     setTimeout(function(){
         document.querySelector("body").style.backgroundColor="black";
